@@ -18,6 +18,17 @@ public class MainClass {
 		*/
 		//myInfo.bmiCalculation();
 		myInfo.getInfo();
+		
+		
+		StudentInfo studentInfo = ctx.getBean("studentInfo",StudentInfo.class);
+		studentInfo.getStudentInfo();
+		Student student2 = ctx.getBean("student2",Student.class);
+		studentInfo.setStudent(student2);
+		studentInfo.getStudentInfo();
+		
+		Pencil pencil = ctx.getBean("pencil",Pencil.class);
+		pencil.use();
+		
 		ctx.close();
 	}
 
